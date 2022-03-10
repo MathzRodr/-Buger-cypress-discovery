@@ -1,0 +1,44 @@
+#nome
+name: Cypress Regression Tests
+
+#Quando será executado
+on: [push]
+
+#define os jobs
+jobs:
+
+#nome do job
+  ui-chrome-tests:
+  
+  #qual sistema que irá executar o workflow
+    runs-on: ubuntu-latest
+    
+  #maquina virtual simples com esse template já pronto para trabalhar com o ubuntu
+    container: cypress/browsers:node14.17.0-chrome88-ff89
+    
+  #estratégia 
+    strategy:
+    
+    #permite que o cypress continue exetuando mesmo que falhe algo
+      fail-fast: false
+      
+  
+    steps:
+    #obtem uma copia do cypress para testar o cypress no github actions
+      - name: Checkout
+        uses: actions/checkout@v2
+        
+    #faz a execução atraves do google chrome
+      - name: 'UI Tests - Chrome'
+        uses: cypress-io/github-action@v2
+        with:
+          install-command: yarn install
+          wait-on: ${{ secrets.BASE_URL }}
+          wait-on-timeout: 120
+          browser: chrome
+          record: true
+          group: 'UI - Chrome'
+          spec: cypress/integration/*
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
