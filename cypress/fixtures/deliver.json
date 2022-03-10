@@ -1,0 +1,50 @@
+{
+    "signup": {
+        "name": "Matheus Rodrigues",
+        "cpf": "00000083899",
+        "email": "mathzinho@gmail.com",
+        "whatsapp": "11999999999",
+        "address": {
+            "cep": "07747275",
+            "numberHouse": "196",
+            "complement": "Casa na Curva",
+            "street": "Rua Erminia Amalia Novello Dell Lago",
+            "district": "Laranjeiras",
+            "city_uf": "Caieiras/SP"
+        },
+        "delivery_method": "Moto",
+        "cnh": "images/cnh-digital.jpg"
+    },
+    "cpf_inv": {
+        "name": "Matheus Rodrigues",
+        "cpf": "000000838AA",
+        "email": "mathzinho@gmail.com",
+        "whatsapp": "11999999999",
+        "address": {
+            "cep": "07747275",
+            "numberHouse": "196",
+            "complement": "Casa na Curva",
+            "street": "Rua Erminia Amalia Novello Dell Lago",
+            "district": "Laranjeiras",
+            "city_uf": "Caieiras/SP"
+        },
+        "delivery_method": "Moto",
+        "cnh": "images/cnh-digital.jpg"
+    },
+    "email_inv": {
+        "name": "Matheus Rodrigues",
+        "cpf": "00000083899",
+        "email": "mathzinho.com",
+        "whatsapp": "11999999999",
+        "address": {
+            "cep": "07747275",
+            "numberHouse": "196",
+            "complement": "Casa na Curva",
+            "street": "Rua Erminia Amalia Novello Dell Lago",
+            "district": "Laranjeiras",
+            "city_uf": "Caieiras/SP"
+        },
+        "delivery_method": "Moto",
+        "cnh": "images/cnh-digital.jpg"
+    }
+}
